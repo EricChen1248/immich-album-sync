@@ -10,7 +10,9 @@ This takes inspiration from https://gist.github.com/davidacampos/47138edcdc3ac04
 * A bit more performant by connecting directly to the database do the search for images, rather than loading all assets into the script through the rest API.
 
 This tool will NOT do the following
-* Delete existing albums. However, it will modify and delete images in an album if it matches the same name as a folder in your base path, and add new photos to it. This also means the script can be run multiple times with the same results, and will not do busy work.
+* Delete existing albums. However, it will modify and delete images in an album if it matches the same name as a folder in your base path, and add new photos to it. 
+  * If a folder was deleted/moved in your external library, the album will stay there in immich (likely as an empty folder)
+  * This also means the script can be run multiple times with the same results, and will not do busy work.
 
 
 # How the folder structure translates to albums
