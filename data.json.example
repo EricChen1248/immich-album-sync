@@ -1,0 +1,27 @@
+{
+    "user_map": {
+        "user1": "user1@gmail.com",
+        "user2": "user2@gmail.com"
+    },
+    "album_mappings": [
+        {
+            "key_name": "USER_1_KEY",
+            "base_path": "/data/user1/photos/shared",
+            "users": {
+                "user2": "editor"
+            }
+        },
+        {
+            "key_name": "USER_1_KEY",
+            "base_path": "/data/user1/photos/private",
+            "users": {}
+        },
+        {
+            "key_name": "USER_2_Key",
+            "base_path": "/data/user2/photos/shared",
+            "users": {
+                "user1": "viewer"
+            }
+        }
+    ]
+}
