@@ -6,19 +6,19 @@
     "album_mappings": [
         {
             "key_name": "USER_1_KEY",
-            "base_path": "/data/user1/photos/shared",
+            "base_path": "/data/user1/shared",
             "users": {
                 "user2": "editor"
             }
         },
         {
             "key_name": "USER_1_KEY",
-            "base_path": "/data/user1/photos/private",
+            "base_path": "/data/user1/private",
             "users": {}
         },
         {
             "key_name": "USER_2_Key",
-            "base_path": "/data/user2/photos/shared",
+            "base_path": "/data/user2",
             "users": {
                 "user1": "viewer"
             }
