@@ -3,7 +3,6 @@ import os
 import json
 from typing import List
 
-
 def get_albums(api_key: str, shared=False):
     """get_albums Get all albums owned by the api_key owner
 

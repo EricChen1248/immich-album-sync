@@ -28,7 +28,7 @@ def create_album():
     with open('data.json') as json_data:
         data = json.load(json_data)
 
-    cursor.execute("SELECT * FROM users;")
+    cursor.execute("SELECT * FROM public.user;")
     users = cursor.fetchall()
 
     def user_to_id(user: str):
@@ -88,14 +88,14 @@ def create_album():
 
             cursor.execute(
                 cursor.mogrify(
-                    'SELECT "originalPath", "id" FROM assets where "originalPath" = ANY(%s);',
+                    'SELECT "originalPath", "id" FROM asset where "originalPath" = ANY(%s);',
                     [found_files],
                 )
             )
             file_id_maps = {v["originalPath"]: v["id"] for v in cursor.fetchall()}
 
             cursor.execute(
-                'SELECT "assetsId" FROM albums_assets_assets WHERE "albumsId" = %s',
+                'SELECT "assetsId" FROM album_asset WHERE "albumsId" = %s',
                 [album_id],
             )
 
